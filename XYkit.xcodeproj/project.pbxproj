@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118074951D432D3B00C2D4FF /* MultiThreadSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118074941D432D3B00C2D4FF /* MultiThreadSync.swift */; };
 		D0A19EA21C292F0B000D67D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A19EA11C292F0B000D67D2 /* AppDelegate.swift */; };
 		D0A19EA41C292F0B000D67D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A19EA31C292F0B000D67D2 /* ViewController.swift */; };
 		D0A19EA71C292F0B000D67D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A19EA51C292F0B000D67D2 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		118074941D432D3B00C2D4FF /* MultiThreadSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiThreadSync.swift; sourceTree = "<group>"; };
 		D0A19E9E1C292F0B000D67D2 /* XYkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A19EA11C292F0B000D67D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A19EA31C292F0B000D67D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				D0A19EA81C292F0B000D67D2 /* Assets.xcassets */,
 				D0A19EAA1C292F0B000D67D2 /* LaunchScreen.storyboard */,
 				D0A19EAD1C292F0B000D67D2 /* Info.plist */,
+				118074941D432D3B00C2D4FF /* MultiThreadSync.swift */,
 			);
 			path = XYkit;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				D0A19EA41C292F0B000D67D2 /* ViewController.swift in Sources */,
 				D0A19EA21C292F0B000D67D2 /* AppDelegate.swift in Sources */,
+				118074951D432D3B00C2D4FF /* MultiThreadSync.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuanxun Fu (GRX2347Q2B)";
 				INFOPLIST_FILE = XYkit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.xy.XYkit;
@@ -258,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = XYkit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.xy.XYkit;
@@ -284,6 +290,7 @@
 				D0A19EB21C292F0B000D67D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
