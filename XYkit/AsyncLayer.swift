@@ -14,16 +14,17 @@ protocol AsyncLayerDelegate {
 }
 
 class AsyncTask {
-    var willDisplay:((layer: CALayer)->())?
-    var display:((context: CGContextRef?)->())?
-    var didDisplay:((layer: CALayer,finish :Bool)->())?
+    var willDisplay: ((layer: CALayer)->())?
+    var display: ((context: CGContextRef?)->())?
+    var didDisplay: ((layer: CALayer,finish :Bool)->())?
 }
 
 class AsyncLayer : CALayer {
     
-    //用来保证layer异步的线程安全
+    ///用来保证layer异步的线程安全
     var value:Int32 = 0
     
+    //TODO:
     var displaySynchronization = true
     
     override func setNeedsDisplay() {
@@ -35,6 +36,7 @@ class AsyncLayer : CALayer {
         self._display()
     }
     
+    //MARK:- private method
     private func _display() {
         guard self.delegate! is AsyncLayerDelegate else {
             return
@@ -46,8 +48,6 @@ class AsyncLayer : CALayer {
         let value = self.value
         
         task.willDisplay!(layer: self)
-        
-        
         
         let size = self.bounds.size
         let opaque = self.opaque
@@ -116,7 +116,7 @@ class AsyncLayer : CALayer {
         return value != self.value
     }
     
-    
+    //
     static func displayQueue() -> dispatch_queue_t {
         let maxQueueCount:Int32 = 16
         var queueCount:Int32 = 0
@@ -133,9 +133,9 @@ class AsyncLayer : CALayer {
 
             let count:Int = Int(queueCount)
             
-            for _ in 0..<count {
+            for i in 0..<count {
                 let attr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_USER_INITIATED, 0)
-                queues.append(dispatch_queue_create("displayQueue", attr))
+                queues.append(dispatch_queue_create("displayQueue\(i)", attr))
             }
         }
         
