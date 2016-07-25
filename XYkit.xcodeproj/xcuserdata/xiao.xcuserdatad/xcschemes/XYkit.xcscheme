@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "118074A71D434F9E00C2D4FF"
+               BuildableName = "XYkitTests.xctest"
+               BlueprintName = "XYkitTests"
+               ReferencedContainer = "container:XYkit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "118074B61D4352BC00C2D4FF"
+               BuildableName = "XYkitUITests.xctest"
+               BlueprintName = "XYkitUITests"
+               ReferencedContainer = "container:XYkit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

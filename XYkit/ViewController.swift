@@ -12,9 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let sy = MultiThreadSync(count: 3) {
+        let sy = MultiThreadSync(count: 4,maxWaitTime: 0) {
             print("完事了！！！！\(NSThread .currentThread())")
         }
+        
+        let l = AsychLabel()
+        l.frame = CGRectMake(40, 50, 200, 200)
+        l.backgroundColor = UIColor.redColor()
+        l.layer.setNeedsDisplay()
+        
+        view.addSubview(l)
         
         let queue1 = dispatch_queue_create("MultiThreadSync1", nil)
         let queue2 = dispatch_queue_create("MultiThreadSync2", nil)

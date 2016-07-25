@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		118074951D432D3B00C2D4FF /* MultiThreadSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118074941D432D3B00C2D4FF /* MultiThreadSync.swift */; };
+		118074AB1D434F9F00C2D4FF /* XYkitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118074AA1D434F9F00C2D4FF /* XYkitTests.swift */; };
+		118074B21D43504500C2D4FF /* MultiThreadSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118074941D432D3B00C2D4FF /* MultiThreadSync.swift */; };
+		118074BA1D4352BC00C2D4FF /* XYkitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118074B91D4352BC00C2D4FF /* XYkitUITests.swift */; };
+		118074C21D4359C700C2D4FF /* AsyncLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118074C11D4359C700C2D4FF /* AsyncLayer.swift */; };
+		118074D01D46635C00C2D4FF /* AsychLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118074CF1D46635C00C2D4FF /* AsychLabel.swift */; };
 		D0A19EA21C292F0B000D67D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A19EA11C292F0B000D67D2 /* AppDelegate.swift */; };
 		D0A19EA41C292F0B000D67D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A19EA31C292F0B000D67D2 /* ViewController.swift */; };
 		D0A19EA71C292F0B000D67D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A19EA51C292F0B000D67D2 /* Main.storyboard */; };
@@ -15,8 +20,33 @@
 		D0A19EAC1C292F0B000D67D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A19EAA1C292F0B000D67D2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		118074AD1D434F9F00C2D4FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0A19E961C292F0B000D67D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0A19E9D1C292F0B000D67D2;
+			remoteInfo = XYkit;
+		};
+		118074BC1D4352BC00C2D4FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0A19E961C292F0B000D67D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0A19E9D1C292F0B000D67D2;
+			remoteInfo = XYkit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		118074941D432D3B00C2D4FF /* MultiThreadSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiThreadSync.swift; sourceTree = "<group>"; };
+		118074A81D434F9E00C2D4FF /* XYkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		118074AA1D434F9F00C2D4FF /* XYkitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYkitTests.swift; sourceTree = "<group>"; };
+		118074AC1D434F9F00C2D4FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		118074B71D4352BC00C2D4FF /* XYkitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYkitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		118074B91D4352BC00C2D4FF /* XYkitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYkitUITests.swift; sourceTree = "<group>"; };
+		118074BB1D4352BC00C2D4FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		118074C11D4359C700C2D4FF /* AsyncLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncLayer.swift; sourceTree = "<group>"; };
+		118074CF1D46635C00C2D4FF /* AsychLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsychLabel.swift; sourceTree = "<group>"; };
 		D0A19E9E1C292F0B000D67D2 /* XYkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A19EA11C292F0B000D67D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A19EA31C292F0B000D67D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +57,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		118074A51D434F9E00C2D4FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		118074B41D4352BC00C2D4FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A19E9B1C292F0B000D67D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +81,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		118074A91D434F9E00C2D4FF /* XYkitTests */ = {
+			isa = PBXGroup;
+			children = (
+				118074AA1D434F9F00C2D4FF /* XYkitTests.swift */,
+				118074AC1D434F9F00C2D4FF /* Info.plist */,
+			);
+			path = XYkitTests;
+			sourceTree = "<group>";
+		};
+		118074B81D4352BC00C2D4FF /* XYkitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				118074B91D4352BC00C2D4FF /* XYkitUITests.swift */,
+				118074BB1D4352BC00C2D4FF /* Info.plist */,
+			);
+			path = XYkitUITests;
+			sourceTree = "<group>";
+		};
 		D0A19E951C292F0B000D67D2 = {
 			isa = PBXGroup;
 			children = (
 				D0A19EA01C292F0B000D67D2 /* XYkit */,
+				118074A91D434F9E00C2D4FF /* XYkitTests */,
+				118074B81D4352BC00C2D4FF /* XYkitUITests */,
 				D0A19E9F1C292F0B000D67D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				D0A19E9E1C292F0B000D67D2 /* XYkit.app */,
+				118074A81D434F9E00C2D4FF /* XYkitTests.xctest */,
+				118074B71D4352BC00C2D4FF /* XYkitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +129,8 @@
 				D0A19EAA1C292F0B000D67D2 /* LaunchScreen.storyboard */,
 				D0A19EAD1C292F0B000D67D2 /* Info.plist */,
 				118074941D432D3B00C2D4FF /* MultiThreadSync.swift */,
+				118074C11D4359C700C2D4FF /* AsyncLayer.swift */,
+				118074CF1D46635C00C2D4FF /* AsychLabel.swift */,
 			);
 			path = XYkit;
 			sourceTree = "<group>";
@@ -70,6 +138,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		118074A71D434F9E00C2D4FF /* XYkitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 118074AF1D434F9F00C2D4FF /* Build configuration list for PBXNativeTarget "XYkitTests" */;
+			buildPhases = (
+				118074A41D434F9E00C2D4FF /* Sources */,
+				118074A51D434F9E00C2D4FF /* Frameworks */,
+				118074A61D434F9E00C2D4FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				118074AE1D434F9F00C2D4FF /* PBXTargetDependency */,
+			);
+			name = XYkitTests;
+			productName = XYkitTests;
+			productReference = 118074A81D434F9E00C2D4FF /* XYkitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		118074B61D4352BC00C2D4FF /* XYkitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 118074BE1D4352BC00C2D4FF /* Build configuration list for PBXNativeTarget "XYkitUITests" */;
+			buildPhases = (
+				118074B31D4352BC00C2D4FF /* Sources */,
+				118074B41D4352BC00C2D4FF /* Frameworks */,
+				118074B51D4352BC00C2D4FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				118074BD1D4352BC00C2D4FF /* PBXTargetDependency */,
+			);
+			name = XYkitUITests;
+			productName = XYkitUITests;
+			productReference = 118074B71D4352BC00C2D4FF /* XYkitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D0A19E9D1C292F0B000D67D2 /* XYkit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A19EB01C292F0B000D67D2 /* Build configuration list for PBXNativeTarget "XYkit" */;
@@ -93,9 +197,18 @@
 		D0A19E961C292F0B000D67D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = xiaoyuan;
 				TargetAttributes = {
+					118074A71D434F9E00C2D4FF = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D0A19E9D1C292F0B000D67D2;
+					};
+					118074B61D4352BC00C2D4FF = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D0A19E9D1C292F0B000D67D2;
+					};
 					D0A19E9D1C292F0B000D67D2 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = Y6WT768RJD;
@@ -116,11 +229,27 @@
 			projectRoot = "";
 			targets = (
 				D0A19E9D1C292F0B000D67D2 /* XYkit */,
+				118074A71D434F9E00C2D4FF /* XYkitTests */,
+				118074B61D4352BC00C2D4FF /* XYkitUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		118074A61D434F9E00C2D4FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		118074B51D4352BC00C2D4FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A19E9C1C292F0B000D67D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,17 +263,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		118074A41D434F9E00C2D4FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				118074B21D43504500C2D4FF /* MultiThreadSync.swift in Sources */,
+				118074AB1D434F9F00C2D4FF /* XYkitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		118074B31D4352BC00C2D4FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				118074BA1D4352BC00C2D4FF /* XYkitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A19E9A1C292F0B000D67D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D0A19EA41C292F0B000D67D2 /* ViewController.swift in Sources */,
 				D0A19EA21C292F0B000D67D2 /* AppDelegate.swift in Sources */,
+				118074D01D46635C00C2D4FF /* AsychLabel.swift in Sources */,
+				118074C21D4359C700C2D4FF /* AsyncLayer.swift in Sources */,
 				118074951D432D3B00C2D4FF /* MultiThreadSync.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		118074AE1D434F9F00C2D4FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0A19E9D1C292F0B000D67D2 /* XYkit */;
+			targetProxy = 118074AD1D434F9F00C2D4FF /* PBXContainerItemProxy */;
+		};
+		118074BD1D4352BC00C2D4FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0A19E9D1C292F0B000D67D2 /* XYkit */;
+			targetProxy = 118074BC1D4352BC00C2D4FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D0A19EA51C292F0B000D67D2 /* Main.storyboard */ = {
@@ -166,6 +327,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		118074B01D434F9F00C2D4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = XYkitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xunlei.XYkitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XYkit.app/XYkit";
+			};
+			name = Debug;
+		};
+		118074B11D434F9F00C2D4FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = XYkitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xunlei.XYkitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XYkit.app/XYkit";
+			};
+			name = Release;
+		};
+		118074BF1D4352BC00C2D4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = XYkitUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xunlei.XYkitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XYkit;
+			};
+			name = Debug;
+		};
+		118074C01D4352BC00C2D4FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = XYkitUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xunlei.XYkitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XYkit;
+			};
+			name = Release;
+		};
 		D0A19EAE1C292F0B000D67D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -274,6 +489,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		118074AF1D434F9F00C2D4FF /* Build configuration list for PBXNativeTarget "XYkitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				118074B01D434F9F00C2D4FF /* Debug */,
+				118074B11D434F9F00C2D4FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		118074BE1D4352BC00C2D4FF /* Build configuration list for PBXNativeTarget "XYkitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				118074BF1D4352BC00C2D4FF /* Debug */,
+				118074C01D4352BC00C2D4FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D0A19E991C292F0B000D67D2 /* Build configuration list for PBXProject "XYkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
