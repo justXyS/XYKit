@@ -1,5 +1,5 @@
 //
-//  AsyncLayer.swift
+//  AsyncLayer.swift  @see YYKit
 //  XYkit
 //
 //  Created by xyxxllh on 16/7/23.
@@ -47,38 +47,76 @@ class AsyncLayer : CALayer {
         
         let value = self.value
         
-        task.willDisplay!(layer: self)
-        
-        let size = self.bounds.size
-        let opaque = self.opaque
-        let scale = self.contentsScale
-        
-        let backgroundColor:CGColor?
-        
-        if self.backgroundColor != nil && opaque {
-            backgroundColor = self.backgroundColor
-        } else {
-            backgroundColor = nil
-        }
-        
-        if size.width < 1 || size.height < 1 {
-            if let image = self.contents {
-                self.contents = nil
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), {
-                    image
-                })
+        if displaySynchronization {
+            task.willDisplay!(layer: self)
+            
+            let size = self.bounds.size
+            let opaque = self.opaque
+            let scale = self.contentsScale
+            
+            let backgroundColor:CGColor?
+            
+            if self.backgroundColor != nil && opaque {
+                backgroundColor = self.backgroundColor
+            } else {
+                backgroundColor = nil
             }
-            task.didDisplay?(layer: self,finish: true)
-            return
-        }
-        
-        dispatch_async(AsyncLayer.displayQueue()) {
-            guard !self.isCancel(value) else {
+            
+            if size.width < 1 || size.height < 1 {
+                if let image = self.contents {
+                    self.contents = nil
+                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), {
+                        image
+                    })
+                }
                 task.didDisplay?(layer: self,finish: true)
                 return
             }
+        
+            dispatch_async(AsyncLayer.displayQueue()) {
+                guard !self.isCancel(value) else {
+                    task.didDisplay?(layer: self,finish: true)
+                    return
+                }
+                UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, self.contentsScale)
+                let context = UIGraphicsGetCurrentContext()
+                if opaque {
+                    CGContextSaveGState(context)
+                    if backgroundColor == nil || CGColorGetAlpha(backgroundColor) < 1 {
+                        CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
+                    }else {
+                        CGContextSetFillColorWithColor(context, backgroundColor)
+                    }
+                    CGContextAddRect(context, CGRectMake(0, 0, size.width * scale, size.height * scale))
+                    CGContextFillPath(context)
+                    CGContextRestoreGState(context)
+                }
+                
+                task.display?(context: context)
+                guard !self.isCancel(self.value) else {
+                    UIGraphicsEndImageContext()
+                    dispatch_async(dispatch_get_main_queue(), {
+                        task.didDisplay?(layer: self,finish: false)
+                    })
+                    return
+                }
+                let image = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                dispatch_async(dispatch_get_main_queue(), {
+                    if self.isCancel(self.value) {
+                        task.didDisplay?(layer: self,finish:false)
+                    } else {
+                        self.contents = image.CGImage
+                        task.didDisplay?(layer: self,finish:true)
+                    }
+                })
+            }
+        } else {
+            OSAtomicIncrement32Barrier(&self.value)
+            task.willDisplay?(layer: self)
             UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, self.contentsScale)
             let context = UIGraphicsGetCurrentContext()
+            
             if opaque {
                 CGContextSaveGState(context)
                 if backgroundColor == nil || CGColorGetAlpha(backgroundColor) < 1 {
@@ -86,29 +124,16 @@ class AsyncLayer : CALayer {
                 }else {
                     CGContextSetFillColorWithColor(context, backgroundColor)
                 }
-                CGContextAddRect(context, CGRectMake(0, 0, size.width * scale, size.height * scale))
+                CGContextAddRect(context, CGRectMake(0, 0, bounds.size.width * contentsScale, bounds.size.height * contentsScale))
                 CGContextFillPath(context)
                 CGContextRestoreGState(context)
             }
             
             task.display?(context: context)
-            guard !self.isCancel(self.value) else {
-                UIGraphicsEndImageContext()
-                dispatch_async(dispatch_get_main_queue(), { 
-                    task.didDisplay?(layer: self,finish: false)
-                })
-                return
-            }
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            dispatch_async(dispatch_get_main_queue(), {
-                if self.isCancel(self.value) {
-                    task.didDisplay?(layer: self,finish:false)
-                } else {
-                    self.contents = image.CGImage
-                    task.didDisplay?(layer: self,finish:true)
-                }
-            })
+            self.contents = image.CGImage
+            task.didDisplay?(layer: self,finish: true)
         }
     }
     
